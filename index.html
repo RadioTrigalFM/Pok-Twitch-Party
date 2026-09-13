@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PokéTwitch Party</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/press-start-2p@latest/latin.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/css/inter@latest/latin.css">
+<link rel="stylesheet" href="css/styles.css?v=20">
+</head>
+<body>
+
+<!-- ============ CONNECT SCREEN ============ -->
+<div id="connect-screen" class="screen active">
+  <div class="logo-wrap">
+    <div class="pokeball-logo"></div>
+    <h1 class="title pixel">PokéTwitch Party</h1>
+    <p class="subtitle">Juego interactivo para Twitch con tus viewers. ¡Conecta tu canal y empieza a jugar!</p>
+  </div>
+  <div class="connect-box">
+    <label>Canal de Twitch</label>
+    <input type="text" id="channel-input" placeholder="nombre_del_canal" autocomplete="off">
+    <label>OAuth Token (opcional)</label>
+    <input type="password" id="token-input" placeholder="oauth:xxxxxxxxxxxx">
+    <div id="connect-status" class="status"></div>
+    <button class="btn-primary" id="connect-btn">Conectar y Jugar</button>
+    <button class="btn-secondary" id="demo-btn">🎮 Modo Demo (sin Twitch)</button>
+    <p class="demo-note">
+      En modo demo se simularán mensajes del chat automáticamente.<br>
+      Con token OAuth podrás enviar mensajes como bot. Obtén uno en <a href="https://twitchtokengenerator.com/?scope=chat%3Aread+chat%3Aedit" target="_blank" rel="noopener noreferrer">twitchtokengenerator.com</a>
+    </p>
+  </div>
+</div>
+
+<!-- ============ MENU SCREEN ============ -->
+<div id="menu-screen" class="screen">
+  <div class="top-bar">
+    <div class="channel-info">
+      <div class="channel-dot"></div>
+      <span id="channel-name">-</span>
+    </div>
+    <button class="btn-secondary" id="settings-btn">⚙️ Ajustes</button>
+    <button class="btn-secondary" id="disconnect-btn">Desconectar</button>
+  </div>
+  <h2 class="menu-title pixel">Elige un Modo</h2>
+  <p class="menu-subtitle">Selecciona un modo de juego para comenzar</p>
+  <div class="modes-grid">
+    <div class="mode-card" data-mode="pasapalabra">
+      <div class="mode-icon">🎯</div>
+      <div class="mode-name pixel">Pasapalabra</div>
+      <div class="mode-desc">Rosco con letras del abecedario. Compite contra el chat.</div>
+      <div class="mode-cmds">
+        <b>!charizard</b> · Responder (! + respuesta)
+      </div>
+      <button class="howto-btn" data-mode="pasapalabra">❓ Cómo Jugar</button>
+    </div>
+    <div class="mode-card" data-mode="rayosolar">
+      <div class="mode-icon">☀️</div>
+      <div class="mode-name pixel">Rayo Solar</div>
+      <div class="mode-desc">Esquiva el Rayo Solar de Venusaur moviéndote por el campo. ¡El último Pokémon en pie gana!</div>
+      <div class="mode-cmds">
+        <b>!izquierda</b> · <b>!derecha</b> · Moverse<br>
+        <b>!stop</b> · Quedarse quieto
+      </div>
+      <button class="howto-btn" data-mode="rayosolar">❓ Cómo Jugar</button>
+    </div>
+    <div class="mode-card" data-mode="arena">
+      <div class="mode-icon">⚔️</div>
+      <div class="mode-name pixel">Arena Pokémon</div>
+      <div class="mode-desc">Conviértete en un Pokémon y lucha 1v1 contra otros viewers.</div>
+      <div class="mode-cmds">
+        <b>!pokemon pikachu</b> · Elegir Pokémon<br>
+        <b>!habilidad1</b> · <b>!habilidad2</b> · Cambiar tipo del ataque
+      </div>
+      <button class="howto-btn" data-mode="arena">❓ Cómo Jugar</button>
+    </div>
+    <div class="mode-card" data-mode="zoroarks">
+      <div class="mode-icon">🦊</div>
+      <div class="mode-name pixel">Zoroarks</div>
+      <div class="mode-desc">Un Zoroark se oculta entre los aldeanos. De día, vota para descubrirlo; de noche, elige bien dónde refugiarte... ¡o podrías no sobrevivir!</div>
+      <div class="mode-cmds">
+        <b>!bosque</b> · <b>!charca</b> · <b>!pueblo</b> · <b>!plaza</b> · Elegir ubicación<br>
+        <b>!vote nombredeusuario</b> · Votar
+      </div>
+      <button class="howto-btn" data-mode="zoroarks">❓ Cómo Jugar</button>
+    </div>
+    <div class="mode-card" data-mode="safari">
+      <div class="mode-icon">🌿</div>
+      <div class="mode-name pixel">Zona Safari</div>
+      <div class="mode-desc">Los viewers cruzan el mapa hasta la meta caminando solo mientras el streamer tiene los ojos cerrados. ¡Al abrirlos, dispara a quien pille caminando!</div>
+      <div class="mode-cmds">
+        <b>!go</b> · Caminar · <b>!stop</b> · Quedarse quieto<br>
+        <b>Streamer:</b> Pulsa el espacio para cerrar los ojos
+      </div>
+      <button class="howto-btn" data-mode="safari">❓ Cómo Jugar</button>
+    </div>
+    <div class="mode-card" data-mode="boss">
+      <div class="mode-icon">👹</div>
+      <div class="mode-name pixel">Boss Cooperativo</div>
+      <div class="mode-desc">Apúntate con tu Pokémon y enfréntate 1 contra 1, por turnos automáticos, adéntrate en la mazmorra y derrota a los Jefes.</div>
+      <div class="mode-cmds">
+        <b>!pokemon pikachu</b> · Apuntarse a la lucha<br>
+        <b>!habilidad1</b> · <b>!habilidad2</b> · Cambiar el tipo de tu ataque
+      </div>
+      <button class="howto-btn" data-mode="boss">❓ Cómo Jugar</button>
+    </div>
+    <div class="mode-card" data-mode="pokerus">
+      <div class="mode-icon">🧬</div>
+      <div class="mode-name pixel">Pokerus</div>
+      <div class="mode-desc">Cada ronda se abren puertas con aforo limitado. Comparte sala con un infectado y te contagiarás... ¡sobrevive hasta erradicar el virus!</div>
+      <div class="mode-cmds">
+        <b>!3</b> o <b>!puerta 3</b> · Elegir puerta
+      </div>
+      <button class="howto-btn" data-mode="pokerus">❓ Cómo Jugar</button>
+    </div>
+    <div class="mode-card" data-mode="volcan">
+      <div class="mode-icon">🌋</div>
+      <div class="mode-name pixel">El Volcán</div>
+      <div class="mode-desc">Dos plataformas de roca volcánica. Cada 40s, la que tenga más Pokémon encima entra en erupción. ¡Sobrevive siendo el último en pie!</div>
+      <div class="mode-cmds">
+        <b>!izquierda</b> · <b>!derecha</b> · Cambiar de plataforma
+      </div>
+      <button class="howto-btn" data-mode="volcan">❓ Cómo Jugar</button>
+    </div>
+    <div class="mode-card" data-mode="vistalince">
+      <div class="mode-icon">🦅</div>
+      <div class="mode-name pixel">Vista Lince</div>
+      <div class="mode-desc">Tras la valla del rancho, observa cuántos Pokémon cruzan el recinto y adivina la cifra exacta antes de que se acabe el tiempo. ¡Quien falle, queda eliminado!</div>
+      <div class="mode-cmds">
+        <b>!&lt;número&gt;</b> (p.ej. <b>!7</b>) · Adivinar cuántos Pokémon has visto cruzar
+      </div>
+      <button class="howto-btn" data-mode="vistalince">❓ Cómo Jugar</button>
+    </div>
+    <div class="mode-card" data-mode="extranjeria">
+      <div class="mode-icon">🛂</div>
+      <div class="mode-name pixel">Control de Extranjería</div>
+      <div class="mode-desc">Ponte en la piel del funcionario de fronteras. Revisa la tarjeta de cada viewer y decide si le dejas pasar.</div>
+      <div class="mode-cmds">
+        <b>Streamer:</b> "Llamar Siguiente" y luego ✔ / ✗
+      </div>
+      <button class="howto-btn" data-mode="extranjeria">❓ Cómo Jugar</button>
+    </div>
+    <div class="mode-card" data-mode="voltorb">
+      <div class="mode-icon">💣</div>
+      <div class="mode-name pixel">Voltorb Explosivo</div>
+      <div class="mode-desc">Todos en corro, por turnos. Nombra un elemento de la categoría sin repetir antes de que se acabe el tiempo. Si se te agotan las vidas, voltorb explota y quedas fuera de la partida.</div>
+      <div class="mode-cmds">
+        <b>!&lt;elemento&gt;</b> (p.ej. <b>!perro</b>) · Responder en tu turno
+      </div>
+      <button class="howto-btn" data-mode="voltorb">❓ Cómo Jugar</button>
+    </div>
+    <div class="mode-card" data-mode="avalugg">
+      <div class="mode-icon">❄️</div>
+      <div class="mode-name pixel">Glaciar de Avalugg</div>
+      <div class="mode-desc">Cruza el glaciar hasta la meta sin caer por el hielo quebradizo. Hay un camino secreto que te lleva directo... ¡descúbrelo!</div>
+      <div class="mode-cmds">
+        <b>!w !a !s !d</b> · Moverse (ej. <b>!aasaa</b>)
+      </div>
+      <button class="howto-btn" data-mode="avalugg">❓ Cómo Jugar</button>
+    </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SETTINGS SCREEN ============ -->
+<div id="settings-screen" class="screen">
+  <div class="top-bar">
+    <h2 class="menu-title pixel settings-title">Ajustes</h2>
+    <button class="btn-secondary" id="settings-back-btn">← Volver</button>
+  </div>
+  <div class="settings-box">
+    <div class="settings-section">
+      <h3>Modo Subs</h3>
+      <label class="subs-mode-toggle" id="subs-mode-toggle" for="subs-mode-checkbox" title="Si está activo, solo los suscriptores del canal podrán apuntarse en cualquier modo de juego">
+        <input type="checkbox" id="subs-mode-checkbox">
+        <span class="subs-mode-toggle-label">🔒 Modo Subs</span>
+      </label>
+      <p class="subs-mode-note" id="subs-mode-note">🔒 Modo Subs activado: solo los suscriptores del canal podrán apuntarse, en cualquier modo que elijas.</p>
+    </div>
+    <div class="settings-section">
+      <h3>Pantalla completa</h3>
+      <label class="subs-mode-toggle" id="auto-fullscreen-toggle" for="auto-fullscreen-checkbox" title="Al entrar a un modo de juego, se pondrá la pantalla completa automáticamente">
+        <input type="checkbox" id="auto-fullscreen-checkbox">
+        <span class="subs-mode-toggle-label">⛶ Pantalla completa automática al entrar a un modo</span>
+      </label>
+    </div>
+    <div class="settings-section">
+      <h3>Volumen</h3>
+      <div class="volume-row">
+        <label for="music-volume-slider">🎵 Música</label>
+        <input type="range" id="music-volume-slider" min="0" max="100" step="1">
+        <span class="volume-value" id="music-volume-value">70%</span>
+      </div>
+      <div class="volume-row">
+        <label for="sfx-volume-slider">🔊 Efectos</label>
+        <input type="range" id="sfx-volume-slider" min="0" max="100" step="1">
+        <span class="volume-value" id="sfx-volume-value">70%</span>
+      </div>
+    </div>
+    <div class="settings-section">
+      <h3>Pokédex</h3>
+      <button class="btn-secondary" id="pokemon-commands-btn">📖 Ver comandos de Pokémon</button>
+      <p class="subs-mode-note is-visible">Consulta el comando exacto <b>!pokemon [nombre]</b> de cada Pokémon (ordenados por Pokédex Nacional) para inscribirse en los modos que lo usan.</p>
+    </div>
+    <div class="settings-section">
+      <p class="subs-mode-note is-visible">Haz click <a href="https://radiotrigalfm.github.io/radio/" target="_blank" rel="noopener noreferrer">AQUÍ</a> para jugar a Radio Trigal FM</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ POKEMON COMMANDS SCREEN ============ -->
+<div id="pokemon-commands-screen" class="screen">
+  <div class="top-bar">
+    <h2 class="menu-title pixel settings-title">📖 Comandos de Pokémon</h2>
+    <button class="btn-secondary" id="pokemon-commands-back-btn">← Volver</button>
+  </div>
+  <p class="pkcmds-intro" id="pkcmds-intro">Cargando...</p>
+  <input type="text" class="pkcmds-search" id="pkcmds-search" placeholder="🔎 Buscar por nombre o número de Pokédex...">
+  <div class="pkcmds-grid" id="pkcmds-grid"></div>
+</div>
+
+<!-- ============ HOW TO PLAY SCREEN ============ -->
+<div id="howto-screen" class="screen">
+  <div class="top-bar">
+    <h2 class="menu-title pixel settings-title" id="howto-title">Cómo Jugar</h2>
+    <button class="btn-secondary" id="howto-back-btn">← Volver</button>
+  </div>
+  <div class="howto-box" id="howto-content"></div>
+</div>
+
+<!-- ============ GAME SCREEN ============ -->
+<div id="game-screen" class="screen">
+  <div class="game-layout">
+    <div class="game-main">
+      <div class="game-header">
+        <div class="game-title pixel" id="game-title">Modo</div>
+        <div class="game-actions">
+          <button class="btn-secondary" id="game-settings-btn">⚙️ Ajustes</button>
+          <button class="btn-secondary" id="back-btn">← Menú</button>
+        </div>
+      </div>
+      <div class="game-content" id="game-content"></div>
+    </div>
+    <div class="chat-sidebar">
+      <div class="chat-header">
+        <span>💬 Chat en Vivo</span>
+        <span id="viewer-count">0</span>
+      </div>
+      <div class="chat-messages" id="chat-messages"></div>
+      <p class="streamer-chat-note" id="streamer-chat-note">🎤 Escribe como si fueras del chat: elige el bot y envía el mensaje</p>
+      <div class="streamer-chat-form" id="streamer-chat-form">
+        <select id="streamer-chat-bot-select" title="Elige qué bot envía el mensaje"></select>
+        <input type="text" id="streamer-chat-input" placeholder="Escribe un comando... (ej: !pokemon pikachu)" autocomplete="off">
+        <button id="streamer-chat-send">Enviar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MODAL ============ -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <h2 id="modal-title" class="pixel">Título</h2>
+    <div id="modal-body" class="modal-body">Contenido</div>
+    <div class="modal-actions" id="modal-actions"></div>
+  </div>
+</div>
+
+<script src="js/bundle.js?v=62"></script>
+</body>
+</html>

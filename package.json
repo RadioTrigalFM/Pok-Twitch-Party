@@ -1,0 +1,13 @@
+{
+  "name": "poketwitch-arena",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PokéTwitch Party - build config",
+  "scripts": {
+    "build": "esbuild js/main.js --bundle --format=iife --outfile=js/bundle.js",
+    "watch": "esbuild js/main.js --bundle --format=iife --outfile=js/bundle.js --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.12"
+  }
+}
