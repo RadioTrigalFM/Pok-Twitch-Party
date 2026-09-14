@@ -17,6 +17,7 @@ const PASAPALABRA_QUESTION_BANK = {
     { q: 'Región donde transcurre la historia del segundo juego de Pokémon Rangers', a: 'Almia', prefix: 'Empieza por A' },
     { q: 'Ciudad ubicada al sur de Pueblo Azalea donde se desarrollan los acontecimientos de la película "Pokémon Heroes"', a: 'Altomare', prefix: 'Empieza por A' },
     { q: 'Pokémon normal de Johto con una mano en la punta de la cola', a: 'Aipom', prefix: 'Empieza por A' },
+    { q: 'Método de evolución de Pokémon como riolu, golbat o togepi', a: 'Amistad', prefix: 'Empieza por A' },
     { q: 'Movimiento que impide durante 5 turnos el uso de movimientos de recuperación de PS por los oponentes', a: 'Anticura', prefix: 'Empieza por A' },
     { q: 'Pokémon enfermero de los Centros Pokémon de Teselia', a: 'Audino', prefix: 'Empieza por A' },
     { q: 'Movimiento planta que cura el estado alterado de todo el equipo', a: 'Aromaterapia', prefix: 'Empieza por A' },
@@ -35,7 +36,7 @@ const PASAPALABRA_QUESTION_BANK = {
     { q: 'Pokémon paradoja relacionado con Salamence', a: 'Bramaluna', prefix: 'Empieza por B' },
     { q: 'Pokémon de cuarta generación que hizo su primera aparición como una estatua en Pokémon Mundo Misterioso', a: 'Bonsly', prefix: 'Empieza por B' },
     { q: 'Pokémon pseudolegendario que debe su nombre a la legendaria espada del Rey Arturo', a: 'Baxcalibur', prefix: 'Empieza por B' },
-    { q: 'Objeto clave que puede ser intercambiado por el bono que entrega el Presidente del Club de Fans de Pokémon', a: 'Bici', alts: ['Bicicleta'], prefix: 'Empieza por B' },
+    { q: 'Objeto clave que puede ser intercambiado por el bono que entrega el Presidente del Club de Fans de Pokémon', a: 'Bici', prefix: 'Empieza por B' },
     { q: 'Tipo perdido por Skorupi al evolucionar a Drapion', a: 'Bicho', prefix: 'Empieza por B' },
     { q: 'Ultraente capaz de utilizar el movimiento Cabeza Sorpresa', a: 'Blacephalon', prefix: 'Empieza por B' },
     { q: 'Amiga de la infancia del protagonista de Blanco y Negro que se convierte en una rival', a: 'Bel', prefix: 'Empieza por B' },
@@ -103,7 +104,7 @@ const PASAPALABRA_QUESTION_BANK = {
     { q: 'Megapiedra que permite megaevolucionar a Emboar', a: 'Emboarita', prefix: 'Empieza por E' },
     { q: 'El trío de las nubes dejó de ser un trío por culpa de este Pokémon', a: 'Enamorus', prefix: 'Empieza por E' },
     { q: 'Habilidad que permite golpear siempre el número máximo de veces', a: 'Encadenado', prefix: 'Empieza por E' },
-    { q: 'Bosque de Johto en el que debemos encontrar a Farfetch\'d sin asustarlo', a: 'Encinar', prefix: 'Empieza por E' },
+    { q: 'Bosque de Johto en el que debemos encontrar a Farfetch'd sin asustarlo', a: 'Encinar', prefix: 'Empieza por E' },
     { q: 'Pokémon legendario con un papel principal en la película "El hechizo de los Unown"', a: 'Entei', prefix: 'Empieza por E' },
     { q: 'Habilidad que aumenta el ataque del Pokémon pero reduce su precisión', a: 'Entusiasmo', prefix: 'Empieza por E' },
     { q: 'Movimiento de tipo agua introducido en quinta generación que puede llegar a quemar al objetivo', a: 'Escaldar', prefix: 'Empieza por E' },
@@ -114,7 +115,7 @@ const PASAPALABRA_QUESTION_BANK = {
     { q: 'Pokémon compañero de AZ', a: 'Floette', prefix: 'Empieza por F' },
     { q: 'Naturaleza que aumenta el ataque y baja el ataque especial', a: 'Firme', prefix: 'Empieza por F' },
     { q: 'Movimiento capaz de derrotar al objetivo de un solo golpe si acierta', a: 'Fisura', prefix: 'Empieza por F' },
-    { q: 'Recurso intercambiado por Porygon o Dratini entre otros en el casino de Ciudad Azulona', a: 'Fichas', alts: ['Ficha'], prefix: 'Empieza por F' },
+    { q: 'Recurso intercambiado por Porygon o Dratini entre otros en el casino de Ciudad Azulona', a: 'Fichas', prefix: 'Empieza por F' },
     { q: 'Modo de combate obligatorio en los "lockes"', a: 'Fijo', prefix: 'Empieza por F' },
     { q: 'Pokémon de Galar formado por varios soldados en fila', a: 'Falinks', prefix: 'Empieza por F' },
     { q: 'Movimiento que deja con 1 ps al objetivo, sin debilitarlo', a: 'Falsotortazo', prefix: 'Empieza por F' },
@@ -130,7 +131,6 @@ const PASAPALABRA_QUESTION_BANK = {
     { q: 'Cuenta la leyenda que es la reencarnación de mujeres que sufrieron accidentes en la nieve', a: 'Froslass', prefix: 'Empieza por F' },
     { q: 'En Pokémon Mundo Misterioso, esfera que sirve para abandonar la mazmorra', a: 'Fugasfera', prefix: 'Empieza por F' },
     { q: 'Pokémon perro con 10 estilos diferentes', a: 'Furfrou', prefix: 'Empieza por F' },
-    { q: 'Método de evolución de Pokémon como riolu, golbat o togepi', a: 'Felicidad', prefix: 'Empieza por F' },
   ],
   'G': [
     { q: 'Pokémon que debe reunir 999 monedas para evolucionar', a: 'Gimmighoul', prefix: 'Empieza por G' },
@@ -138,6 +138,11 @@ const PASAPALABRA_QUESTION_BANK = {
     { q: 'Único Pokémon con la habilidad Retirada', a: 'Golisopod', prefix: 'Empieza por G' },
     { q: 'Objeto que permite cambiar a Shaymin de forma', a: 'Gracídea', prefix: 'Empieza por G' },
     { q: 'Edificio ubicado en las ciudades Pokémon en el que te recompensan con una medalla al derrotar al líder', a: 'Gimnasio', prefix: 'Empieza por G' },
+    { q: 'Pokémon que sólo se puede obtener al evolucionar un Kirlia macho con la piedra alba', a: 'Gallade', prefix: 'Empieza por G' },
+    { q: 'Pokémon insecto que cierta organización devolvió a la vida del Paleozoico y modificó el gran cañón de su lomo', a: 'Genesect', prefix: 'Empieza por G' },
+    { q: 'Pokémon fantasma de primera generación que perdió su habilidad Levitación con el paso de las generaciones', a: 'Gengar', prefix: 'Empieza por G' },
+    { q: 'Pokémon que se puede usar como montura en Ciudad Luminalia', a: 'Gogoat', prefix: 'Empieza por G' },
+    { q: 'Pokémon cuyas estadísticas varían en función del tamaño', a: 'Gourgeist', prefix: 'Empieza por G' },
   ],
   'H': [
     { q: 'Nombre antiguo de la región de Sinnoh', a: 'Hisui', prefix: 'Empieza por H' },
@@ -145,6 +150,11 @@ const PASAPALABRA_QUESTION_BANK = {
     { q: 'Dispositivo de Kalos mediante el cual se comunican los protagonistas de Pokémon X & Y', a: 'Holomisor', prefix: 'Empieza por H' },
     { q: 'Último tipo añadido a los juegos de Pokémon', a: 'Hada', prefix: 'Empieza por H' },
     { q: 'Movimiento que añade el tipo fantasma al objetivo, pudiendo tener hasta 3 tipos', a: 'Halloween', prefix: 'Empieza por H' },
+    { q: 'Pokémon shiny capturable en la Reserva Natural de Pokémon Blanco 2 y Negro 2', a: 'Haxorus', prefix: 'Empieza por H' },
+    { q: 'Pokémon eléctrico de Kalos completamente inmune a los tipos fantasma y agua (gracias a su habilidad)', a: 'Heliolisk', prefix: 'Empieza por H' },
+    { q: 'Pokémon que planeaba atacar a Pedrita en el bosque baya, hasta que el protagonista llega para salvarla', a: 'Hypno', prefix: 'Empieza por H' },
+    { q: 'Evolución de Tyrogue al tener más ataque físico que defensa física', a: 'Hitmonlee', prefix: 'Empieza por H' },
+    { q: 'Evolución de Tyrogue al tener más defensa física que ataque físico', a: 'Hitmonchan', prefix: 'Empieza por H' },
   ],
   'I': [
     { q: 'Objeto de crianza usado para obtener diversos Pokémon bebés', a: 'Incienso', prefix: 'Empieza por I' },
@@ -153,6 +163,10 @@ const PASAPALABRA_QUESTION_BANK = {
     { q: 'Habilidad que reduce el ataque de los rivales al entrar en combate', a: 'Intimidación', prefix: 'Empieza por I' },
     { q: 'Campeona de la Liga Pokémon de Teselia en el anime', a: 'Iris', prefix: 'Empieza por I' },
     { q: 'Habilidad que permite transformarse en el rival al entrar el combate', a: 'Impostor', prefix: 'Empieza por I' },
+    { q: 'Pokémon con orejas en forma de croissant con diferencia de género', a: 'Indeedee', prefix: 'Empieza por I' },
+    { q: 'Pokémon considerado el rey de VGC desde que apareció en Pokémon Sol y Luna', a: 'Incineroar', prefix: 'Empieza por I' },
+    { q: 'Pokémon inicial basado en Sun Wukong', a: 'Infernape', prefix: 'Empieza por I' },
+    { q: 'Pokémon inicial de Galar basado en un pistolero', a: 'Inteleon', prefix: 'Empieza por I' },
   ],
   'J': [
     { q: 'Nombre del desarrollador japonés de Game Freak que da nombre a una técnica de caza para shinies', a: 'Junichi', prefix: 'Empieza por J' },
@@ -160,6 +174,10 @@ const PASAPALABRA_QUESTION_BANK = {
     { q: 'Pokémon singular con el poder de conceder deseos', a: 'Jirachi', prefix: 'Empieza por J' },
     { q: 'Región en la que aparece el primer Pokémon shiny de la historia', a: 'Johto', prefix: 'Empieza por J' },
     { q: 'Evolución de Eevee obtenida al usar la piedra trueno', a: 'Jolteon', prefix: 'Empieza por J' },
+    { q: 'Pokémon de primera generación cuyo color de piel fue cambiado para evitar confusiones racistas', a: 'Jynx', prefix: 'Empieza por J' },
+    { q: 'Viaja arrastrado por los vientos estacionales hasta agotar sus esporas de algodón', a: 'Jumpluff', prefix: 'Empieza por J' },
+    { q: 'Antes de la introducción de Basculegion, este Pokémon era el único de tipo Agua/Fantasma junto a su preevolución', a: 'Jellicent', prefix: 'Empieza por J' },
+    { q: 'Pokémon cuyo canto provoca un sueño inaguantable', a: 'Jigglypuff', prefix: 'Empieza por J' },
   ],
   'K': [
     { q: 'Líder de gimnasio de Kanto que acaba siendo Alto Mando', a: 'Koga', prefix: 'Empieza por K' },
@@ -167,6 +185,10 @@ const PASAPALABRA_QUESTION_BANK = {
     { q: 'Región en la que puedes elegir dos Pokémon iniciales', a: 'Kalos', prefix: 'Empieza por K' },
     { q: 'Evolución de Scyther en la región antigua de Sinnoh', a: 'Kleavor', prefix: 'Empieza por K' },
     { q: 'Único Pokémon que puede tener la habilidad General Supremo', a: 'Kingambit', prefix: 'Empieza por K' },
+    { q: 'Pokémon que comparte nombre con el ayudante de Orochimaru en Naruto', a: 'Kabuto', prefix: 'Empieza por K' },
+    { q: 'Es el ultraente con mayor ataque físico', a: 'Kartana', prefix: 'Empieza por K' },
+    { q: 'Pokémon que obstaculiza el camino hacia el gimnasio de Ciudad Arborada', a: 'Kecleon', prefix: 'Empieza por K' },
+    { q: 'Pokémon que gracias a su habilidad le permite estar en constante sueño, lo que evita contraer otros estados alterados', a: 'Komala', prefix: 'Empieza por K' },
   ],
   'L': [
     { q: 'Pokémon lucha/acero capaz de percibir el aura de los seres vivos', a: 'Lucario', prefix: 'Empieza por L' },
@@ -174,21 +196,32 @@ const PASAPALABRA_QUESTION_BANK = {
     { q: 'Primer Pokémon en poder aprender el movimiento Cuchilla Solar', a: 'Lurantis', prefix: 'Empieza por L' },
     { q: 'Pokémon basado en la criatura del folclore japonés "Kappa", lleva un nenúfar sobre su cabeza', a: 'Lombre', prefix: 'Empieza por L' },
     { q: 'Único movimiento que puede ser muy eficaz contra un tipo que debería resistirlo', a: 'Liofilización', prefix: 'Empieza por L' },
+    { q: 'Pokémon usado en el anime para viajar por el mar entre las Islas Naranja', a: 'Lapras', prefix: 'Empieza por L' },
+    { q: 'Pokémon errante que aparece en Hoenn si le dices a tu madre que el color que han dicho en las noticias es el rojo', a: 'Latias', prefix: 'Empieza por L' },
+    { q: 'Pokémon con sombrero mexicano que ha conseguido evolucionar usando una Piedra Agua', a: 'Ludicolo', prefix: 'Empieza por L' },
+    { q: 'Pokémon que tiene un gran sonido de piano', a: 'Ledian', prefix: 'Empieza por L' },
+    { q: 'Llega a ser muy activo en las noches de luna llena; este Pokémon de tercera generación fue descubierto hace 40 años en el lugar en el que había caído un meteorito', a: 'Lunatone', prefix: 'Empieza por L' },
   ],
   'M': [
     { q: 'Objeto de cuarta generación aplicable a los árboles para obtener determinados Pokémon', a: 'Miel', prefix: 'Empieza por M' },
     { q: 'Objeto que permite cambiar la naturaleza de un Pokémon', a: 'Menta', prefix: 'Empieza por M' },
     { q: 'Naturaleza que baja el ataque físico y sube la velocidad', a: 'Miedosa', prefix: 'Empieza por M' },
     { q: 'Líder del gimnasio de Ciudad Celeste, especialista en tipo agua', a: 'Misty', prefix: 'Empieza por M' },
-    { q: 'Saga de spin-offs donde los Pokémon exploran mazmorras', a: 'Mundo Misterioso', prefix: 'Empieza por M' },
     { q: 'Pokémon mítico del que se dice que contiene el ADN de todos los Pokémon', a: 'Mew', prefix: 'Empieza por M' },
+    { q: 'Pokémon artificial creado hace 500 años por un científico talentoso; puede percibir emociones y pensamientos de otros Pokémon', a: 'Magearna', prefix: 'Empieza por M' },
+    { q: 'Pokémon singular considerado el príncipe del mar', a: 'Manaphy', prefix: 'Empieza por M' },
+    { q: 'Pokémon que puede ser comprado en el Centro Pokémon del Mt. Moon por 500 pokedólares', a: 'Magikarp', prefix: 'Empieza por M' },
+    { q: 'Pokémon más fuerte del líder Marcial, cuyo movimiento característico es Tiro Vital', a: 'Makuhita', prefix: 'Empieza por M' },
+    { q: 'Único Pokémon que necesita a otro Pokémon concreto en el equipo para evolucionar', a: 'Mantyke', prefix: 'Empieza por M' },
   ],
   'N': [
     { q: 'Pokémon al que se enfrenta Gengar durante la intro de los juegos originales de Pokémon', a: 'Nidorino', prefix: 'Empieza por N' },
-    { q: 'Pokémon que, según la leyenda, maldijo a un humano transformándolo en un Pokémon', a: 'Ninetales', prefix: 'Empieza por N' },
-    { q: 'Primer Pokémon con diferencia de género', a: 'Nidoran', prefix: 'Empieza por N' },
-    { q: 'Único Pokémon que evoluciona a dos pokémon a la vez', a: 'Nincada', prefix: 'Empieza por N' },
+    { q: 'Según la leyenda, este Pokémon maldijo a un humano para convertirse en Pokémon', a: 'Ninetales', prefix: 'Empieza por N' },
+    { q: 'Primer Pokémon que tuvo una diferencia de género entre macho y hembra', a: 'Nidoran', prefix: 'Empieza por N' },
+    { q: 'Pokémon que evoluciona a dos Pokémon a la vez si se dispone de espacio en el equipo y una pokeball en la bolsa', a: 'Nincada', prefix: 'Empieza por N' },
     { q: 'Característica que modifica ligeramente las estadísticas de un pokémon, aumentando una y reduciendo otra', a: 'Naturaleza', prefix: 'Empieza por N' },
+    { q: 'Pokémon de novena generación que arrastra el cuerpo por el suelo al desplazarse dejando un rastro de sal', a: 'Nacli', prefix: 'Empieza por N' },
+    { q: 'Ultraente que controla a Samina generándole un problema mental', a: 'Nihilego', prefix: 'Empieza por N' },
   ],
   'Ñ': [
     { q: 'Meseta de Kanto donde se celebra la Liga Pokémon', a: 'Añil', prefix: 'Contiene la Ñ' },
@@ -300,8 +333,13 @@ const PASAPALABRA_QUESTION_BANK = {
   ],
   'U': [
     { q: 'Pokémon que evoluciona con un bloque de turba mientras hay luna llena', a: 'Ursaring', prefix: 'Empieza por U' },
+    { q: 'Se dice que cuando apareció en el mundo, voló otorgándole la inteligencia a los humanos, para que estos pudieran mejorar sus vidas y resolver sus problemas', a: 'Uxie', prefix: 'Empieza por U' },
+    { q: 'Evolución de Eevee al subir un nivel con felicidad alta durante la noche', a: 'Umbreon', prefix: 'Empieza por U' },
+    { q: 'Hasta la llegada de Mega Golurk era el único Pokémon con la habilidad Puño Invisible', a: 'Urshifu', prefix: 'Empieza por U' },
+    { q: 'Pokémon de Teselia basado en un faisán con claras diferencias de género', a: 'Unfezant', prefix: 'Empieza por U' },
+    { q: 'Montura de Pokémon Leyendas Arceus que se utiliza para rastrear y desenterrar objetos', a: 'Ursaluna', prefix: 'Empieza por U' },
     { q: 'Lugar de donde proceden los ultraentes', a: 'Ultraespacio', prefix: 'Empieza por U' },
-    { q: 'Pokémon misterioso que sólo conoce el movimiento Poder Oculto', a: 'Unown', prefix: 'Empieza por U' },
+    { q: 'Se dice que cobraron vida cuando alguien hechizó unos antiguos jeroglíficos; no se sabe si estos Pokémon surgieron antes o después de la escritura', a: 'Unown', prefix: 'Empieza por U' },
     { q: 'Habilidad introducida en la séptima generación que incrementa la característica más alta del usuario cada vez que debilita a un rival en combate', a: 'Ultraimpulso', prefix: 'Empieza por U' },
     { q: 'Ataque físico de tipo Lucha introducido en la segunda generación que cuenta con prioridad alta (+1) para golpear antes que el rival', a: 'Ultrapuño', prefix: 'Empieza por U' },
   ],
@@ -320,7 +358,12 @@ const PASAPALABRA_QUESTION_BANK = {
     { q: 'Tipo elemental introducido en primera generación que es totalmente inmune al envenenamiento y supereficaz contra Planta y Hada', a: 'Veneno', prefix: 'Empieza por V' },
   ],
   'W': [
-    { q: 'Pokémon con menos estadística totales', a: 'Wishiwashi', prefix: 'Empieza por W' },
+    { q: 'Pokémon con menos estadísticas totales', a: 'Wishiwashi', prefix: 'Empieza por W' },
+    { q: 'Su descomunal tamaño lo convierte en un Pokémon muy popular; puede dejar fuera de combate a sus oponentes con el impacto de su enorme cuerpo al caer al agua tras uno de sus saltos', a: 'Wailord', prefix: 'Empieza por W' },
+    { q: 'Pokémon que si es hembra tiene los labios pintados', a: 'Wobbuffet', prefix: 'Empieza por W' },
+    { q: 'Una variedad de Pokémon pez; en el pasado se creía erróneamente que podía ser una forma regional de Dugtrio', a: 'Wugtrio', prefix: 'Empieza por W' },
+    { q: 'Pokémon compañero del Sr. Arenque cuyo mote es Peeko', a: 'Wingull', prefix: 'Empieza por W' },
+    { q: 'Pokémon al que le añadieron la habilidad Gas Reactivo en octava generación', a: 'Weezing', prefix: 'Empieza por W' },
     { q: 'Nombre de la baya amarilla que restaura una gran cantidad de PS al portador en combate, pero le provoca confusión si a este le disgusta el sabor seco', a: 'Wiki', prefix: 'Empieza por W' },
     { q: 'Apellido del profesor que te entrega tu primer compañero y te asigna tareas de investigación de campo en el juego Pokémon GO', a: 'Willow', prefix: 'Empieza por W' },
     { q: 'Consola de sobremesa de Nintendo que albergó títulos derivados de la franquicia como Pokémon Battle Revolution, My Pokémon Ranch o las dos entregas de PokéPark', a: 'Wii', prefix: 'Empieza por W' },
@@ -329,18 +372,21 @@ const PASAPALABRA_QUESTION_BANK = {
     { q: 'Simulador de batallas en línea no oficial más popular del mundo para jugar combates competitivos por turnos en navegador', a: 'Showdown', prefix: 'Contiene la W' },
   ],
   'X': [
-    { q: 'Pokémon psíquico/volador que se dice que puede ver el pasado y el futuro', a: 'Xatu', prefix: 'Empieza por X' },
+    { q: 'En Pokémon Mundo Misterioso: sabio Pokémon que puede ver el futuro; se encuentra en la cima del Monte Oráculo', a: 'Xatu', prefix: 'Empieza por X' },
     { q: 'Pokémon legendario de tipo hada asociado a la vida eterna', a: 'Xerneas', prefix: 'Empieza por X' },
     { q: 'Amiga y rival del protagonista en la región de Kalos, de carácter alegre y enérgico, que parte junto a ti desde Pueblo Boceto', a: 'Xana', prefix: 'Empieza por X' },
     { q: 'Científico de élite del Team Flare con gafas de visor y cabello extravagante que investiga la energía de la megaevolución para Lysson', a: 'Xero', prefix: 'Empieza por X' },
+    { q: 'Ultraente con más ataque especial', a: 'Xurkitree', prefix: 'Empieza por X' },
     { q: 'Fenómeno exclusivo de la región de Galar que transforma a los Pokémon a un tamaño gigantesco durante tres turnos', a: 'Dinamax', prefix: 'Contiene la X' },
   ],
   'Y': [
-    { q: 'Pokémon legendario siniestro/volador asociado a la destrucción, de Pokémon Y', a: 'Yveltal', prefix: 'Empieza por Y' },
-    { q: 'Pokémon que lleva puesta una máscara con su antiguo rostro', a: 'Yamask', prefix: 'Empieza por Y' },
+    { q: 'Pokémon legendario que absorbe la energía vital de los seres vivos', a: 'Yveltal', prefix: 'Empieza por Y' },
+    { q: 'Su máscara representa la cara que poseía cuando era humano; a veces se le saltan las lágrimas al contemplarlo', a: 'Yamask', prefix: 'Empieza por Y' },
     { q: 'Líder del Gimnasio de Ciudad Olivo en la región de Johto, especializada en el tipo Acero y cuidadora del Ampharos del Faro Olivo', a: 'Yasmina', prefix: 'Empieza por Y' },
     { q: 'Ciudad costera de la región de Kalos célebre por albergar la Torre Maestra y el gimnasio de tipo Lucha de Corelia', a: 'Yantra', prefix: 'Empieza por Y' },
     { q: 'Pokémon de tipo bicho/volador que evoluciona al conocer el movimiento Poder Pasado', a: 'Yanmega', prefix: 'Empieza por Y' },
+    { q: 'Pokémon de Galar usado por los pastores para controlar el rebaño; al correr, genera electricidad por la base de la cola', a: 'Yamper', prefix: 'Empieza por Y' },
+    { q: 'Pokémon mangosta que fue introducido en Alola para controlar la población de Rattatas', a: 'Yungoos', prefix: 'Empieza por Y' },
   ],
   'Z': [
     { q: 'Aparato de precisión que reacciona a objetos que no se ven', a: 'Zahorí', prefix: 'Empieza por Z' },
@@ -349,75 +395,32 @@ const PASAPALABRA_QUESTION_BANK = {
     { q: 'Baya muy común en el juego competitivo que restaura un 25% de los PS máximos del portador cuando su salud cae por debajo de la mitad', a: 'Zidra', prefix: 'Empieza por Z' },
     { q: 'Baya consumible capaz de curar inmediatamente al Pokémon de cualquier problema de estado alterado o de la confusión', a: 'Ziuela', prefix: 'Empieza por Z' },
     { q: 'Pequeña baya de sabor picante que cura al instante la parálisis si un Pokémon la lleva equipada', a: 'Zreza', prefix: 'Empieza por Z' },
+    { q: 'Pokémon legendario que cambia de forma al sostener una espada oxidada con la boca', a: 'Zacian', prefix: 'Empieza por Z' },
+    { q: 'Único Pokémon capaz de usar el movimiento Embate Supremo, que duplica su potencia al ejecutarlo contra un enemigo Dinamax', a: 'Zamazenta', prefix: 'Empieza por Z' },
+    { q: 'Pokémon singular que tiene una forma "papá" en la que lleva atado al cuello un pañuelo rosa', a: 'Zarude', prefix: 'Empieza por Z' },
+    { q: 'Siempre se mueve hacia adelante y hacia atrás frotando la nariz contra el suelo; es fácil identificarlo por las huellas en zigzag que deja', a: 'Zigzagoon', prefix: 'Empieza por Z' },
+    { q: 'Es el Pokémon más fuerte de Camila, líder de tipo eléctrico de la región de Teselia', a: 'Zebstrika', prefix: 'Empieza por Z' },
+    { q: 'Debido al tiempo que pasaron en oscuras cavernas, sus ojos se atrofiaron y perdieron su visión; usan ondas ultrasónicas para comprobar los alrededores y detectar obstáculos o enemigos', a: 'Zubat', prefix: 'Empieza por Z' },
+    { q: 'Pokémon dragón con dos cabezas las cuales se llevan muy mal entre ellas', a: 'Zweilous', prefix: 'Empieza por Z' },
+    { q: 'Actualmente su megaevolución es el Pokémon con mayor ataque especial jamás registrado', a: 'Zygarde', prefix: 'Empieza por Z' },
   ],
 };
 
-// Nº de partidas que se recuerdan para no repetir preguntas: una vez que
-// una pregunta sale en una partida, no puede volver a salir hasta que
-// hayan pasado (como mínimo) estas partidas (ver pickPasapalabraQuestions).
-const PASAPALABRA_HISTORY_MAX_GAMES = 10;
-const PASAPALABRA_HISTORY_STORAGE_KEY = 'pk_pasapalabra_question_history_v1';
-
-// Identificador estable de una pregunta del banco: pregunta+respuesta (no
-// solo la respuesta, por si algún día dos preguntas de la misma letra
-// compartieran la misma respuesta).
-function pasapalabraQuestionKey(entry) {
-  return entry.q + '|' + entry.a;
-}
-
-// Historial persistido en localStorage (mismo patrón que
-// BOSS_PROGRESS_STORAGE_KEY en boss.js, para que sobreviva a recargas de
-// página o reinicios del navegador de OBS, no solo dentro de una sesión):
-// un array de hasta PASAPALABRA_HISTORY_MAX_GAMES partidas, cada una un
-// objeto letra -> identificador (ver pasapalabraQuestionKey) de la
-// pregunta que salió esa partida para esa letra. Se usa en
-// pickPasapalabraQuestions para no repetir preguntas demasiado pronto.
-function loadPasapalabraHistory() {
-  try {
-    const raw = localStorage.getItem(PASAPALABRA_HISTORY_STORAGE_KEY);
-    const parsed = raw ? JSON.parse(raw) : [];
-    return Array.isArray(parsed) ? parsed : [];
-  } catch (e) {
-    return []; // localStorage puede no estar disponible (p.ej. en algunos navegadores embebidos)
-  }
-}
-
-function savePasapalabraHistory(history) {
-  try {
-    localStorage.setItem(PASAPALABRA_HISTORY_STORAGE_KEY, JSON.stringify(history));
-  } catch (e) {
-    // localStorage puede no estar disponible: sin persistencia entre sesiones, pero el modo sigue funcionando
-  }
-}
-
-// Elige aleatoriamente una pregunta de la batería para cada letra (nueva
-// combinación cada partida), descartando las que ya hayan salido en las
-// últimas PASAPALABRA_HISTORY_MAX_GAMES partidas (ver
-// loadPasapalabraHistory/savePasapalabraHistory más arriba) para esa misma
-// letra. Si la exclusión dejara la pool de alguna letra sin ninguna
-// pregunta disponible (pools pequeñas tras muchas partidas seguidas), se
-// ignora el historial solo para esa letra y se elige de la pool completa,
-// para no dejar nunca el modo sin pregunta.
+// Elige aleatoriamente una pregunta de la batería para cada letra (nueva combinación cada partida)
 export function pickPasapalabraQuestions() {
-  const recentGames = loadPasapalabraHistory().slice(-PASAPALABRA_HISTORY_MAX_GAMES);
   const result = {};
-  const thisGamePicks = {};
   Object.keys(PASAPALABRA_QUESTIONS_DEFAULT).forEach(letter => {
     const pool = PASAPALABRA_QUESTION_BANK[letter];
     if (pool && pool.length) {
-      const usedKeys = new Set(recentGames.map(g => g[letter]).filter(Boolean));
-      let available = pool.filter(entry => !usedKeys.has(pasapalabraQuestionKey(entry)));
-      if (!available.length) available = pool;
-      const pick = available[Math.floor(Math.random() * available.length)];
-      result[letter] = { q: pick.q, a: pick.a, alts: pick.alts, prefix: pick.prefix };
-      thisGamePicks[letter] = pasapalabraQuestionKey(pick);
+      const pick = pool[Math.floor(Math.random() * pool.length)];
+      result[letter] = { q: pick.q, a: pick.a, prefix: pick.prefix };
     } else {
       result[letter] = PASAPALABRA_QUESTIONS_DEFAULT[letter];
     }
   });
-  savePasapalabraHistory([...recentGames, thisGamePicks].slice(-PASAPALABRA_HISTORY_MAX_GAMES));
   return result;
 }
+
 
 const PASAPALABRA_QUESTIONS_DEFAULT = {
   'A': { q: 'Pokémon inicial de tipo Planta en la región de Kanto', a: 'bulbasaur' },
@@ -449,7 +452,3 @@ const PASAPALABRA_QUESTIONS_DEFAULT = {
   'Z': { q: 'Pokémon serpiente venenosa, evoluciona de Ekans', a: 'arbok' },
 };
 
-// El modo Boss cooperativo ya no usa una lista propia de jefes especiales:
-// el jefe se elige al azar de la misma Pokédex Nacional que el Coliseo del
-// modo Arena (ver ARENA_POKEMON_DB en data/arenaPokemonDb.js), como un
-// Pokémon normal más.
